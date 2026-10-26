@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Consulte projetos de ensino, pesquisa, extensão e oportunidades de estágio."
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Projetos e Oportunidades | Portal Acadêmico</title>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                Portal Acadêmico
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                    <li><a href="requisitos.html">Requisitos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- CABEÇALHO DA PÁGINA -->
+        <section class="page-header">
+
+            <div class="container">
+
+                <nav aria-label="Caminho de navegação">
+                    <ol class="breadcrumb">
+                        <li><a href="../index.html">Início</a></li>
+                        <li aria-current="page">Projetos e oportunidades</li>
+                    </ol>
+                </nav>
+
+                <p class="eyebrow">Explore oportunidades</p>
+
+                <h1>Projetos e oportunidades</h1>
+
+                <p>
+                    Encontre projetos de ensino, pesquisa, extensão e
+                    oportunidades de estágio que contribuam para sua
+                    formação acadêmica e profissional.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATÁLOGO -->
+        <section class="projects-catalog" aria-labelledby="catalog-title">
+
+            <div class="container">
+
+                <h2 id="catalog-title" class="visually-hidden">
+                    Catálogo de projetos
+                </h2>
+
+
+                <!-- BUSCA -->
+                <form class="search-form" role="search">
+
+                    <label for="project-search">
+                        Buscar projetos
+                    </label>
+
+                    <div class="search-control">
+
+                        <input
+                            type="search"
+                            id="project-search"
+                            name="busca"
+                            placeholder="Digite o nome, área ou professor..."
+                        >
+
+                        <button type="submit">
+                            Buscar
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <div class="catalog-layout">
+
+                    <!-- FILTROS -->
+                    <aside class="filters" aria-labelledby="filters-title">
+
+                        <h2 id="filters-title">
+                            Filtrar resultados
+                        </h2>
+
+
+                        <fieldset>
+
+                            <legend>Tipo de oportunidade</legend>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="todos"
+                                    checked
+                                >
+                                Todos
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="ensino"
+                                >
+                                Ensino
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="pesquisa"
+                                >
+                                Pesquisa
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="extensao"
+                                >
+                                Extensão
+                            </label>
+
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="tipo"
+                                    value="estagio"
+                                >
+                                Estágio
+                            </label>
+
+                        </fieldset>
+
+
+                        <fieldset>
+
+                            <legend>Status</legend>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="status"
+                                    value="aberto"
+                                >
+                                Inscrições abertas
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="status"
+                                    value="andamento"
+                                >
+                                Em andamento
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="status"
+                                    value="concluido"
+                                >
+                                Concluído
+                            </label>
+
+                        </fieldset>
+
+
+                        <div class="filter-group">
+
+                            <label for="area">
+                                Área
+                            </label>
+
+                            <select id="area" name="area">
+
+                                <option value="">
+                                    Todas as áreas
+                                </option>
+
+                                <option value="tecnologia">
+                                    Tecnologia
+                                </option>
+
+                                <option value="agricultura">
+                                    Agricultura
+                                </option>
+
+                                <option value="educacao">
+                                    Educação
+                                </option>
+
+                                <option value="administracao">
+                                    Administração
+                                </option>
+
+                                <option value="meio-ambiente">
+                                    Meio Ambiente
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <button type="button" id="clear-filters">
+                            Limpar filtros
+                        </button>
+
+                    </aside>
+
+
+                    <!-- RESULTADOS -->
+                    <div class="catalog-results">
+
+                        <header class="results-header">
+
+                            <p>
+                                <strong id="result-count">6</strong>
+                                oportunidades encontradas
+                            </p>
+
+                            <label for="order">
+                                Ordenar por:
+
+                                <select id="order" name="ordem">
+                                    <option value="recentes">
+                                        Mais recentes
+                                    </option>
+
+                                    <option value="titulo">
+                                        Nome
+                                    </option>
+
+                                    <option value="vagas">
+                                        Número de vagas
+                                    </option>
+                                </select>
+
+                            </label>
+
+                        </header>
+
+
+                        <div class="project-grid" id="project-list">
+
+
+                            <!-- PROJETO 1 -->
+                            <article
+                                class="project-card"
+                                data-type="extensao"
+                                data-status="aberto"
+                                data-area="tecnologia agricultura"
+                            >
+
+                                <header>
+
+                                    <div class="project-labels">
+                                        <span class="badge">Extensão</span>
+                                        <span class="status">Inscrições abertas</span>
+                                    </div>
+
+                                    <h2>
+                                        Sistema de Irrigação Inteligente
+                                    </h2>
+
+                                </header>
+
+                                <p>
+                                    Desenvolvimento de uma solução de baixo custo
+                                    para monitoramento da umidade do solo e
+                                    automação da irrigação.
+                                </p>
+
+                                <dl class="project-info">
+
+                                    <div>
+                                        <dt>Orientador</dt>
+                                        <dd>Prof. João Silva</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Área</dt>
+                                        <dd>Tecnologia e Agricultura</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Vagas</dt>
+                                        <dd>3</dd>
+                                    </div>
+
+                                </dl>
+
+                                <footer>
+                                    <a href="projeto.html">
+                                        Ver detalhes
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROJETO 2 -->
+                            <article
+                                class="project-card"
+                                data-type="pesquisa"
+                                data-status="aberto"
+                                data-area="tecnologia"
+                            >
+
+                                <header>
+
+                                    <div class="project-labels">
+                                        <span class="badge">Pesquisa</span>
+                                        <span class="status">Inscrições abertas</span>
+                                    </div>
+
+                                    <h2>
+                                        Inteligência Artificial Aplicada a Documentos
+                                    </h2>
+
+                                </header>
+
+                                <p>
+                                    Estudo de técnicas de inteligência artificial
+                                    para reconhecimento e processamento automatizado
+                                    de documentos.
+                                </p>
+
+                                <dl class="project-info">
+
+                                    <div>
+                                        <dt>Orientadora</dt>
+                                        <dd>Profª. Maria Souza</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Área</dt>
+                                        <dd>Inteligência Artificial</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Vagas</dt>
+                                        <dd>2</dd>
+                                    </div>
+
+                                </dl>
+
+                                <footer>
+                                    <a href="projeto.html">
+                                        Ver detalhes
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROJETO 3 -->
+                            <article
+                                class="project-card"
+                                data-type="ensino"
+                                data-status="andamento"
+                                data-area="tecnologia educacao"
+                            >
+
+                                <header>
+
+                                    <div class="project-labels">
+                                        <span class="badge">Ensino</span>
+                                        <span class="status">Em andamento</span>
+                                    </div>
+
+                                    <h2>
+                                        Laboratório de Desenvolvimento Web
+                                    </h2>
+
+                                </header>
+
+                                <p>
+                                    Desenvolvimento de aplicações web voltadas
+                                    ao aprendizado prático de tecnologias utilizadas
+                                    na disciplina.
+                                </p>
+
+                                <dl class="project-info">
+
+                                    <div>
+                                        <dt>Orientador</dt>
+                                        <dd>Prof. Carlos Oliveira</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Área</dt>
+                                        <dd>Desenvolvimento Web</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Vagas</dt>
+                                        <dd>Projeto em andamento</dd>
+                                    </div>
+
+                                </dl>
+
+                                <footer>
+                                    <a href="projeto.html">
+                                        Ver detalhes
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROJETO 4 -->
+                            <article
+                                class="project-card"
+                                data-type="estagio"
+                                data-status="aberto"
+                                data-area="administracao tecnologia"
+                            >
+
+                                <header>
+
+                                    <div class="project-labels">
+                                        <span class="badge">Estágio</span>
+                                        <span class="status">Inscrições abertas</span>
+                                    </div>
+
+                                    <h2>
+                                        Estágio em Suporte e Infraestrutura de TI
+                                    </h2>
+
+                                </header>
+
+                                <p>
+                                    Oportunidade de estágio voltada ao suporte
+                                    aos usuários e manutenção da infraestrutura
+                                    tecnológica.
+                                </p>
+
+                                <dl class="project-info">
+
+                                    <div>
+                                        <dt>Supervisor</dt>
+                                        <dd>Equipe de Tecnologia</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Área</dt>
+                                        <dd>Tecnologia da Informação</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Vagas</dt>
+                                        <dd>2</dd>
+                                    </div>
+
+                                </dl>
+
+                                <footer>
+                                    <a href="projeto.html">
+                                        Ver detalhes
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROJETO 5 -->
+                            <article
+                                class="project-card"
+                                data-type="extensao"
+                                data-status="aberto"
+                                data-area="meio-ambiente"
+                            >
+
+                                <header>
+
+                                    <div class="project-labels">
+                                        <span class="badge">Extensão</span>
+                                        <span class="status">Inscrições abertas</span>
+                                    </div>
+
+                                    <h2>
+                                        Tecnologia e Sustentabilidade
+                                    </h2>
+
+                                </header>
+
+                                <p>
+                                    Projeto voltado à conscientização ambiental
+                                    e desenvolvimento de soluções tecnológicas
+                                    sustentáveis.
+                                </p>
+
+                                <dl class="project-info">
+
+                                    <div>
+                                        <dt>Orientadora</dt>
+                                        <dd>Profª. Ana Martins</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Área</dt>
+                                        <dd>Meio Ambiente</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Vagas</dt>
+                                        <dd>5</dd>
+                                    </div>
+
+                                </dl>
+
+                                <footer>
+                                    <a href="projeto.html">
+                                        Ver detalhes
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROJETO 6 -->
+                            <article
+                                class="project-card"
+                                data-type="pesquisa"
+                                data-status="andamento"
+                                data-area="tecnologia"
+                            >
+
+                                <header>
+
+                                    <div class="project-labels">
+                                        <span class="badge">Pesquisa</span>
+                                        <span class="status">Em andamento</span>
+                                    </div>
+
+                                    <h2>
+                                        Monitoramento Inteligente de Redes
+                                    </h2>
+
+                                </header>
+
+                                <p>
+                                    Pesquisa sobre técnicas de monitoramento,
+                                    diagnóstico e identificação de falhas em
+                                    redes de computadores.
+                                </p>
+
+                                <dl class="project-info">
+
+                                    <div>
+                                        <dt>Orientador</dt>
+                                        <dd>Prof. Rafael Santos</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Área</dt>
+                                        <dd>Redes de Computadores</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Vagas</dt>
+                                        <dd>Projeto em andamento</dd>
+                                    </div>
+
+                                </dl>
+
+                                <footer>
+                                    <a href="projeto.html">
+                                        Ver detalhes
+                                    </a>
+                                </footer>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p><strong>Portal Acadêmico</strong></p>
+
+            <nav aria-label="Navegação do rodapé">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="requisitos.html">Requisitos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                </ul>
+            </nav>
+
+            <p>
+                Projeto desenvolvido para a disciplina de Programação Web I.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="../js/projetos.js"></script>
+
+</body>
+
+</html>
