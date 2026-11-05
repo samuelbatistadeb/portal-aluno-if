@@ -3081,6 +3081,921 @@ button:focus-visible {
 }
 
 /* =========================================================
+   PÁGINA 6 — PROFESSORES E ORIENTADORES
+========================================================= */
+
+/* Áreas em destaque */
+
+.teacher-areas {
+    padding: 55px 0;
+    border-bottom: 1px solid #e5e9e3;
+}
+
+.teacher-areas .section-header {
+    margin-bottom: 25px;
+}
+
+.teacher-areas .section-header h2 {
+    color: #173f35;
+    font-size: 1.6rem;
+}
+
+.area-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.area-list a {
+    display: inline-block;
+    padding: 10px 17px;
+    background-color: #f3f6f1;
+    color: #4f7c57;
+    border: 1px solid #e2e9df;
+    border-radius: 25px;
+    font-size: 0.87rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.area-list a:hover {
+    background-color: #173f35;
+    border-color: #173f35;
+    color: #ffffff;
+}
+
+
+/* Catálogo */
+
+.teachers-catalog {
+    padding: 65px 0 85px;
+}
+
+
+/* Busca */
+
+.search-form {
+    max-width: 760px;
+    margin-bottom: 45px;
+}
+
+.search-form > label {
+    display: block;
+    margin-bottom: 10px;
+    color: #173f35;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.search-control {
+    display: flex;
+    gap: 12px;
+}
+
+.search-control input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 17px;
+    border: 1px solid #dce3da;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #35443a;
+    font-family: inherit;
+    font-size: 0.92rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-control input:focus {
+    border-color: #4f7c57;
+    box-shadow: 0 0 0 3px rgba(79, 124, 87, 0.12);
+}
+
+.search-control button {
+    padding: 0 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #173f35;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-control button:hover {
+    background-color: #4f7c57;
+}
+
+
+/* Organização dos filtros e resultados */
+
+.teachers-catalog-layout {
+    display: grid;
+    grid-template-columns: 245px minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* Filtros */
+
+.filters {
+    padding: 25px;
+    border: 1px solid #e5e9e3;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.filters h2 {
+    color: #173f35;
+    font-size: 1.15rem;
+    margin: 0 0 25px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group label,
+.filters legend {
+    display: block;
+    margin-bottom: 10px;
+    color: #35443a;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.filter-group select,
+.results-header select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #dce3da;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #58645a;
+    font-family: inherit;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.filter-group select:focus,
+.results-header select:focus {
+    border-color: #4f7c57;
+}
+
+.filters fieldset {
+    border: none;
+    border-top: 1px solid #edf0eb;
+    padding: 20px 0 0;
+    margin: 20px 0;
+}
+
+.filters fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 12px 0;
+    color: #647067;
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+
+.filters input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #4f7c57;
+    cursor: pointer;
+}
+
+#clear-teacher-filters {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #dce3da;
+    border-radius: 7px;
+    background-color: #ffffff;
+    color: #4f7c57;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#clear-teacher-filters:hover {
+    background-color: #f3f6f1;
+    border-color: #4f7c57;
+}
+
+
+/* Cabeçalho dos resultados */
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.results-header p {
+    color: #68736a;
+    font-size: 0.9rem;
+}
+
+.results-header strong {
+    color: #173f35;
+}
+
+.results-header label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #68736a;
+    font-size: 0.85rem;
+}
+
+.results-header select {
+    width: auto;
+    min-width: 140px;
+}
+
+
+/* Grade de professores */
+
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.teacher-profile-card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border: 1px solid #e5e9e3;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.teacher-profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(23, 63, 53, 0.07);
+}
+
+.teacher-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.teacher-avatar {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #eaf0e7;
+    color: #4f7c57;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.teacher-card-header h2 {
+    color: #173f35;
+    font-size: 1.05rem;
+    margin: 0 0 5px;
+}
+
+.teacher-card-header p {
+    color: #879087;
+    font-size: 0.82rem;
+    margin: 0;
+}
+
+.teacher-profile-card > p {
+    color: #68736a;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* Tags de áreas */
+
+.teacher-profile-card .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.teacher-profile-card .tag-list li {
+    padding: 6px 10px;
+    background-color: #f3f6f1;
+    color: #4f7c57;
+    border-radius: 5px;
+    font-size: 0.74rem;
+    font-weight: 600;
+}
+
+
+/* Informações do professor */
+
+.teacher-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px 0;
+    margin: auto 0 0;
+    border-top: 1px solid #edf0eb;
+}
+
+.teacher-info div {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.teacher-info dt {
+    color: #879087;
+    font-size: 0.8rem;
+}
+
+.teacher-info dd {
+    color: #35443a;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: right;
+    margin: 0;
+}
+
+
+/* Rodapé do cartão */
+
+.teacher-profile-card footer {
+    padding-top: 17px;
+    border-top: 1px solid #edf0eb;
+}
+
+.teacher-profile-card footer a {
+    color: #4f7c57;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.teacher-profile-card footer a:hover {
+    color: #173f35;
+    text-decoration: underline;
+}
+
+
+/* Orientação */
+
+.guidance-section {
+    padding: 75px 0;
+    background-color: #f7f8f5;
+    border-top: 1px solid #e5e9e3;
+}
+
+.guidance-section .container {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.guidance-section h2 {
+    max-width: 500px;
+    color: #173f35;
+    font-size: 2rem;
+    line-height: 1.3;
+    margin: 12px 0 20px;
+}
+
+.guidance-section p {
+    color: #68736a;
+    line-height: 1.8;
+}
+
+.guidance-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guidance-list li {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e0e7dd;
+    color: #35443a;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.guidance-list li:first-child {
+    border-top: 1px solid #e0e7dd;
+}
+
+.guidance-list span {
+    color: #b86f3d;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* =========================================================
+   PÁGINA 7 — PERFIL DO PROFESSOR
+========================================================= */
+
+/* Cabeçalho do perfil */
+
+.teacher-profile-header {
+    padding: 40px 0 55px;
+    background-color: #f7f8f5;
+    border-bottom: 1px solid #e5e9e3;
+}
+
+.teacher-profile-intro {
+    display: grid;
+    grid-template-columns: 110px minmax(0, 1fr) auto;
+    gap: 30px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.teacher-avatar-large {
+    width: 110px;
+    height: 110px;
+    font-size: 1.7rem;
+    background-color: #e6eee3;
+}
+
+.teacher-profile-heading h1 {
+    color: #173f35;
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.teacher-position {
+    color: #68736a;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.teacher-profile-heading .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.teacher-profile-heading .tag-list li {
+    padding: 7px 12px;
+    background-color: #eaf0e7;
+    color: #4f7c57;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.teacher-profile-action {
+    align-self: center;
+}
+
+
+/* Navegação interna */
+
+.teacher-profile-navigation {
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e9e3;
+}
+
+.teacher-profile-navigation ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.teacher-profile-navigation a {
+    display: block;
+    padding: 18px 0;
+    color: #647067;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.teacher-profile-navigation a:hover {
+    color: #4f7c57;
+}
+
+
+/* Layout */
+
+.teacher-profile-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 65px;
+    align-items: start;
+    padding-top: 65px;
+    padding-bottom: 80px;
+}
+
+.teacher-profile-content {
+    min-width: 0;
+}
+
+.teacher-profile-content > section {
+    margin-bottom: 70px;
+    scroll-margin-top: 130px;
+}
+
+.teacher-profile-content h2 {
+    color: #173f35;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin: 12px 0 22px;
+}
+
+.teacher-profile-content p {
+    color: #68736a;
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+
+/* Áreas de atuação */
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.expertise-grid article {
+    padding: 25px;
+    border: 1px solid #e5e9e3;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.expertise-grid article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(23, 63, 53, 0.06);
+}
+
+.expertise-grid article > span {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #b86f3d;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.expertise-grid h3 {
+    color: #173f35;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.expertise-grid p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* Projetos do professor */
+
+.teacher-project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.teacher-project-list > article {
+    padding: 27px;
+    border: 1px solid #e5e9e3;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: box-shadow 0.25s ease;
+}
+
+.teacher-project-list > article:hover {
+    box-shadow: 0 8px 25px rgba(23, 63, 53, 0.06);
+}
+
+.teacher-project-list header {
+    margin-bottom: 15px;
+}
+
+.project-labels {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.teacher-project-list h3 {
+    color: #173f35;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.teacher-project-list > article > p {
+    font-size: 0.93rem;
+}
+
+.teacher-project-list dl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 15px 0;
+    margin: 18px 0;
+    border-top: 1px solid #edf0eb;
+    border-bottom: 1px solid #edf0eb;
+}
+
+.teacher-project-list dl div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.teacher-project-list dt {
+    color: #879087;
+    font-size: 0.77rem;
+}
+
+.teacher-project-list dd {
+    color: #35443a;
+    font-size: 0.87rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.teacher-project-list footer a {
+    color: #4f7c57;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.teacher-project-list footer a:hover {
+    color: #173f35;
+    text-decoration: underline;
+}
+
+
+/* Orientação */
+
+.guidance-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.guidance-options article {
+    padding: 22px;
+    background-color: #f7f8f5;
+    border-radius: 10px;
+}
+
+.guidance-options h3 {
+    color: #173f35;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.guidance-options p {
+    font-size: 0.87rem;
+    margin: 0;
+}
+
+
+/* Contato */
+
+.teacher-contact {
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #f3f6f1;
+}
+
+.teacher-contact h2 {
+    margin-bottom: 15px;
+}
+
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    margin-top: 25px;
+    border: 1px solid #e1e9de;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.contact-card dl {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0;
+}
+
+.contact-card dt {
+    color: #879087;
+    font-size: 0.78rem;
+    margin-bottom: 5px;
+}
+
+.contact-card dd {
+    color: #35443a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.contact-card dd a {
+    color: #4f7c57;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-card dd a:hover {
+    text-decoration: underline;
+}
+
+
+/* Sidebar */
+
+.teacher-profile-sidebar {
+    position: sticky;
+    top: 145px;
+}
+
+.teacher-profile-sidebar section {
+    padding: 25px;
+    margin-bottom: 22px;
+    border: 1px solid #e5e9e3;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.teacher-profile-sidebar h2 {
+    color: #173f35;
+    font-size: 1.1rem;
+    margin: 0 0 20px;
+}
+
+.teacher-profile-sidebar dl {
+    margin: 0;
+}
+
+.teacher-profile-sidebar dl div {
+    padding: 13px 0;
+    border-bottom: 1px solid #edf0eb;
+}
+
+.teacher-profile-sidebar dl div:last-child {
+    border-bottom: none;
+}
+
+.teacher-profile-sidebar dt {
+    color: #879087;
+    font-size: 0.78rem;
+    margin-bottom: 5px;
+}
+
+.teacher-profile-sidebar dd {
+    color: #35443a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.teacher-profile-sidebar .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.teacher-profile-sidebar .tag-list li {
+    padding: 6px 10px;
+    background-color: #f3f6f1;
+    color: #4f7c57;
+    border-radius: 5px;
+    font-size: 0.77rem;
+    font-weight: 600;
+}
+
+.teacher-profile-sidebar .sidebar-contact {
+    background-color: #f3f6f1;
+    border-color: #e1e9de;
+}
+
+.sidebar-contact p {
+    color: #68736a;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.sidebar-contact .button {
+    display: block;
+    text-align: center;
+}
+
+
+/* Professores relacionados */
+
+.related-teachers {
+    padding: 75px 0;
+    background-color: #f7f8f5;
+    border-top: 1px solid #e5e9e3;
+}
+
+.related-teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.related-teacher-grid article {
+    padding: 25px;
+    border: 1px solid #e5e9e3;
+    border-radius: 12px;
+    background-color: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.related-teacher-grid article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(23, 63, 53, 0.07);
+}
+
+.related-teacher-grid h3 {
+    color: #173f35;
+    font-size: 1rem;
+    margin: 18px 0 8px;
+}
+
+.related-teacher-grid p {
+    color: #68736a;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.related-teacher-grid a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4f7c57;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.related-teacher-grid a:hover {
+    color: #173f35;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
    19. RESPONSIVIDADE DAS PÁGINAS INTERNAS
 ========================================================= */
 
