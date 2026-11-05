@@ -1241,3 +1241,1699 @@ button:focus-visible {
     }
 
 }
+
+
+/* =========================================================
+   15. COMPONENTES COMPARTILHADOS DAS PÁGINAS INTERNAS
+========================================================= */
+
+
+/* ---------- Cabeçalho das páginas internas ---------- */
+
+.page-header {
+    padding: 70px 0 65px;
+
+    background-color: var(--color-white);
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.page-header .container {
+    max-width: var(--container-width);
+}
+
+.page-header h1 {
+    max-width: 850px;
+
+    margin-bottom: 20px;
+
+    font-size: clamp(2.5rem, 4.5vw, 4rem);
+}
+
+.page-header > .container > p:last-child {
+    max-width: 720px;
+
+    margin-bottom: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+
+/* ---------- Breadcrumb ---------- */
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 0 0 35px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.82rem;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: "/";
+
+    margin-left: 8px;
+
+    color: #AAB5B1;
+}
+
+.breadcrumb a {
+    transition: color var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--color-primary);
+}
+
+.breadcrumb [aria-current="page"] {
+    color: var(--color-primary);
+
+    font-weight: 600;
+}
+
+
+/* ---------- Classe apenas para leitores de tela ---------- */
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+/* ---------- Tags ---------- */
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.tag-list li {
+    padding: 7px 11px;
+
+    color: var(--color-primary);
+
+    background-color: var(--color-accent-light);
+
+    border-radius: 4px;
+
+    font-size: 0.78rem;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   16. PÁGINA — PROJETOS E OPORTUNIDADES
+   Referência principal: ETH Innovedum
+========================================================= */
+
+.projects-catalog {
+    padding: 65px 0 110px;
+
+    background-color: var(--color-surface);
+}
+
+
+/* =========================================================
+   BUSCA
+========================================================= */
+
+.search-form {
+    margin-bottom: 45px;
+}
+
+.search-form > label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--color-primary);
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.search-control {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    max-width: 850px;
+}
+
+.search-control input {
+    width: 100%;
+    min-height: 54px;
+
+    padding: 0 18px;
+
+    color: var(--color-text);
+
+    background-color: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-right: 0;
+
+    border-radius:
+        var(--radius-small)
+        0
+        0
+        var(--radius-small);
+
+    outline: none;
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.search-control input::placeholder {
+    color: #929D99;
+}
+
+.search-control input:focus {
+    border-color: var(--color-accent);
+
+    box-shadow:
+        inset 0 0 0 1px var(--color-accent);
+}
+
+.search-control button {
+    min-width: 110px;
+
+    padding: 0 22px;
+
+    color: var(--color-white);
+
+    background-color: var(--color-primary);
+
+    border: 1px solid var(--color-primary);
+
+    border-radius:
+        0
+        var(--radius-small)
+        var(--radius-small)
+        0;
+
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition: background-color var(--transition);
+}
+
+.search-control button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+
+/* =========================================================
+   LAYOUT DO CATÁLOGO
+========================================================= */
+
+.catalog-layout {
+    display: grid;
+
+    grid-template-columns: 250px minmax(0, 1fr);
+
+    align-items: start;
+
+    gap: 50px;
+}
+
+
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.filters {
+    position: sticky;
+    top: 105px;
+
+    padding-right: 30px;
+
+    border-right: 1px solid var(--color-border);
+}
+
+.filters > h2 {
+    margin-bottom: 28px;
+
+    color: var(--color-primary);
+
+    font-size: 1rem;
+
+    letter-spacing: 0;
+}
+
+.filters fieldset {
+    margin: 0 0 30px;
+    padding: 0 0 28px;
+
+    border: 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.filters legend {
+    margin-bottom: 15px;
+
+    color: var(--color-text);
+
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.filters fieldset label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 11px;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.88rem;
+
+    cursor: pointer;
+}
+
+.filters input[type="radio"],
+.filters input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+
+    margin: 0;
+
+    accent-color: var(--color-primary);
+}
+
+.filter-group {
+    margin-bottom: 28px;
+}
+
+.filter-group > label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--color-text);
+
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.filter-group select,
+.results-header select {
+    width: 100%;
+
+    padding: 10px 34px 10px 12px;
+
+    color: var(--color-text);
+
+    background-color: var(--color-white);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-small);
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.filter-group select:focus,
+.results-header select:focus {
+    border-color: var(--color-accent);
+
+    box-shadow: 0 0 0 3px rgba(79, 124, 87, 0.12);
+}
+
+#clear-filters {
+    padding: 0;
+
+    color: var(--color-primary);
+
+    background: none;
+
+    border: 0;
+
+    font-size: 0.83rem;
+    font-weight: 650;
+
+    cursor: pointer;
+}
+
+#clear-filters:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESULTADOS
+========================================================= */
+
+.catalog-results {
+    min-width: 0;
+}
+
+.results-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.results-header p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.88rem;
+}
+
+.results-header strong {
+    color: var(--color-primary);
+}
+
+.results-header label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.82rem;
+}
+
+.results-header select {
+    width: auto;
+
+    min-width: 155px;
+}
+
+
+/*
+    O .project-grid original da Home possui 3 colunas.
+    Dentro do catálogo usaremos 2 para permitir cards
+    com mais informações, seguindo a lógica do ETH.
+*/
+
+.catalog-results .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+.catalog-results .project-card {
+    min-height: 390px;
+}
+
+.catalog-results .project-card h2 {
+    margin-top: 22px;
+    margin-bottom: 0;
+
+    color: var(--color-primary);
+
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.project-labels {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+/* ---------- Informações estruturadas ---------- */
+
+.project-info {
+    display: grid;
+
+    gap: 11px;
+
+    margin: 0 0 25px;
+}
+
+.project-info > div {
+    display: grid;
+
+    grid-template-columns: 85px 1fr;
+
+    gap: 10px;
+}
+
+.project-info dt {
+    color: var(--color-text-muted);
+
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.project-info dd {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   17. PÁGINA — DETALHES DO PROJETO
+========================================================= */
+
+
+/* =========================================================
+   CABEÇALHO DO PROJETO
+========================================================= */
+
+.project-header {
+    padding: 60px 0 70px;
+
+    background-color: var(--color-white);
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.project-header .project-labels {
+    margin-bottom: 22px;
+}
+
+.project-header h1 {
+    max-width: 920px;
+
+    margin-bottom: 24px;
+
+    font-size: clamp(2.5rem, 4.5vw, 4.2rem);
+}
+
+.project-summary {
+    max-width: 780px;
+
+    margin-bottom: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 1.12rem;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   LAYOUT DO PROJETO
+========================================================= */
+
+.project-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        315px;
+
+    align-items: start;
+
+    gap: 80px;
+
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+.project-content {
+    min-width: 0;
+}
+
+.project-content > section {
+    max-width: 760px;
+
+    padding: 0 0 55px;
+    margin-bottom: 55px;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.project-content > section:last-child {
+    margin-bottom: 0;
+}
+
+.project-content section > h2 {
+    margin-bottom: 22px;
+
+    color: var(--color-primary);
+
+    font-size: 1.7rem;
+}
+
+.project-content section > p {
+    color: var(--color-text-muted);
+
+    line-height: 1.8;
+}
+
+.project-content section > p:last-child {
+    margin-bottom: 0;
+}
+
+.project-content section > ul:not(.tag-list) {
+    display: grid;
+
+    gap: 11px;
+
+    margin: 22px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.project-content section > ul:not(.tag-list) li {
+    position: relative;
+
+    padding-left: 23px;
+
+    color: var(--color-text-muted);
+}
+
+.project-content section > ul:not(.tag-list) li::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0.72em;
+    left: 2px;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: var(--color-cerrado);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   PROFESSOR ORIENTADOR
+========================================================= */
+
+.project-content .advisor {
+    max-width: 760px;
+
+    border-bottom: 0;
+}
+
+.advisor .teacher-card {
+    padding: 30px;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+}
+
+.teacher-card header {
+    margin-bottom: 18px;
+}
+
+.teacher-card h3 {
+    margin-bottom: 5px;
+
+    color: var(--color-primary);
+
+    font-size: 1.25rem;
+}
+
+.teacher-card header p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.86rem;
+}
+
+.teacher-card > p {
+    max-width: 600px;
+
+    margin-bottom: 20px;
+}
+
+.teacher-card .tag-list {
+    margin-bottom: 25px;
+}
+
+.teacher-card footer {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.teacher-card footer a {
+    display: inline-flex;
+
+    align-items: center;
+
+    min-height: 40px;
+
+    padding: 0 15px;
+
+    color: var(--color-primary);
+
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-small);
+
+    font-size: 0.83rem;
+    font-weight: 650;
+
+    transition:
+        color var(--transition),
+        background-color var(--transition);
+}
+
+.teacher-card footer a:hover {
+    color: var(--color-white);
+
+    background-color: var(--color-primary);
+}
+
+
+/* =========================================================
+   SIDEBAR DO PROJETO
+========================================================= */
+
+.project-sidebar {
+    position: sticky;
+
+    top: 105px;
+}
+
+.project-sidebar > section {
+    padding: 27px;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+}
+
+.project-sidebar > section:first-child {
+    border-radius:
+        var(--radius-medium)
+        var(--radius-medium)
+        0
+        0;
+}
+
+.project-sidebar > section:last-child {
+    background-color: var(--color-primary);
+
+    border-color: var(--color-primary);
+
+    border-radius:
+        0
+        0
+        var(--radius-medium)
+        var(--radius-medium);
+}
+
+.project-sidebar h2 {
+    margin-bottom: 22px;
+
+    color: var(--color-primary);
+
+    font-size: 1rem;
+}
+
+.project-sidebar dl {
+    margin: 0;
+}
+
+.project-sidebar dl > div {
+    padding: 13px 0;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.project-sidebar dl > div:first-child {
+    padding-top: 0;
+}
+
+.project-sidebar dl > div:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+.project-sidebar dt {
+    margin-bottom: 3px;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.72rem;
+}
+
+.project-sidebar dd {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 0.86rem;
+    font-weight: 650;
+}
+
+
+/* ---------- CTA da sidebar ---------- */
+
+.project-sidebar > section:last-child h2 {
+    color: var(--color-white);
+}
+
+.project-sidebar > section:last-child p {
+    margin-bottom: 20px;
+
+    color: #D7E2DE;
+
+    font-size: 0.86rem;
+    line-height: 1.65;
+}
+
+.project-sidebar > section:last-child .button {
+    width: 100%;
+
+    color: var(--color-primary);
+
+    background-color: var(--color-white);
+}
+
+.project-sidebar > section:last-child .button:hover {
+    background-color: #EDF2F0;
+}
+
+
+/* =========================================================
+   PROJETOS RELACIONADOS
+========================================================= */
+
+.related-projects {
+    padding: 90px 0 105px;
+
+    background-color: var(--color-surface);
+
+    border-top: 1px solid var(--color-border);
+}
+
+.related-projects .section-header {
+    display: flex;
+
+    align-items: end;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.related-projects .section-header h2 {
+    margin-bottom: 0;
+}
+
+.related-projects .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    max-width: 820px;
+}
+
+.related-projects .project-card {
+    min-height: 290px;
+}
+
+.related-projects .project-card > .badge {
+    align-self: flex-start;
+
+    margin-bottom: 20px;
+}
+
+.related-projects .project-card h3 {
+    margin: 0 0 15px;
+
+    color: var(--color-primary);
+}
+
+.related-projects .project-card > a {
+    margin-top: auto;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--color-border);
+
+    color: var(--color-primary);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.related-projects .project-card > a::after {
+    content: " →";
+
+    color: var(--color-cerrado);
+}
+
+
+/* =========================================================
+   18. PÁGINA — REQUISITOS DE CONCLUSÃO
+========================================================= */
+
+
+/* =========================================================
+   JORNADA ACADÊMICA
+========================================================= */
+
+.academic-journey {
+    padding: 90px 0;
+
+    background-color: var(--color-primary);
+}
+
+.academic-journey .eyebrow {
+    color: #B8D0C1;
+}
+
+.academic-journey .section-header h2 {
+    color: var(--color-white);
+}
+
+.academic-journey .section-header > p:not(.eyebrow) {
+    color: #D7E2DE;
+}
+
+
+/* ---------- Etapas ---------- */
+
+.journey-steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 60px 0 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.journey-steps li {
+    position: relative;
+
+    padding: 30px 30px 20px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+/*
+    Pequeno ponto sobre a linha.
+    Faz a jornada parecer contínua sem criar um
+    componente visual excessivamente complexo.
+*/
+
+.journey-steps li::before {
+    content: "";
+
+    position: absolute;
+
+    top: -5px;
+    left: 0;
+
+    width: 9px;
+    height: 9px;
+
+    background-color: var(--color-cerrado);
+
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+}
+
+.step-number {
+    display: block;
+
+    margin-bottom: 22px;
+
+    color: #B8D0C1;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+.journey-steps h3 {
+    max-width: 200px;
+
+    margin-bottom: 10px;
+
+    color: var(--color-white);
+
+    font-size: 1.05rem;
+}
+
+.journey-steps p {
+    max-width: 210px;
+
+    margin-bottom: 0;
+
+    color: #C8D7D2;
+
+    font-size: 0.83rem;
+}
+
+
+/* =========================================================
+   CARDS DE REQUISITOS
+========================================================= */
+
+.requirements-section {
+    padding: 105px 0;
+
+    background-color: var(--color-white);
+}
+
+.requirement-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+.requirement-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 430px;
+
+    padding: 35px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-medium);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.requirement-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #C6D3CE;
+
+    box-shadow: var(--shadow-medium);
+}
+
+.requirement-card header {
+    position: relative;
+
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.requirement-number {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    color: var(--color-cerrado);
+
+    font-size: 0.75rem;
+    font-weight: 750;
+
+    letter-spacing: 0.08em;
+}
+
+.requirement-card .eyebrow {
+    margin-bottom: 8px;
+
+    font-size: 0.67rem;
+}
+
+.requirement-card h3 {
+    margin-bottom: 0;
+
+    color: var(--color-primary);
+
+    font-size: 1.45rem;
+}
+
+.requirement-card > p {
+    max-width: 550px;
+
+    margin-bottom: 25px;
+
+    color: var(--color-text-muted);
+}
+
+
+/* ---------- Dados ---------- */
+
+.requirement-card dl {
+    display: grid;
+
+    gap: 0;
+
+    margin: 0 0 30px;
+}
+
+.requirement-card dl > div {
+    display: grid;
+
+    grid-template-columns: 120px 1fr;
+
+    gap: 15px;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.requirement-card dt {
+    color: var(--color-text-muted);
+
+    font-size: 0.77rem;
+}
+
+.requirement-card dd {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+/* ---------- Links ---------- */
+
+.requirement-card footer {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-top: auto;
+    padding-top: 20px;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.requirement-card footer a {
+    color: var(--color-primary);
+
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.requirement-card footer a::after {
+    content: " →";
+
+    color: var(--color-cerrado);
+}
+
+
+/* =========================================================
+   ATALHOS
+========================================================= */
+
+.quick-links {
+    padding: 80px 0;
+
+    background-color: var(--color-cerrado-light);
+}
+
+.quick-links .section-header {
+    margin-bottom: 30px;
+}
+
+.quick-links .section-header h2 {
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+}
+
+.quick-links nav ul {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.quick-links nav a {
+    display: flex;
+
+    min-height: 100px;
+
+    align-items: flex-end;
+
+    padding: 20px;
+
+    color: var(--color-primary);
+
+    background-color: var(--color-white);
+
+    border: 1px solid rgba(184, 111, 61, 0.16);
+    border-radius: var(--radius-small);
+
+    font-size: 0.88rem;
+    font-weight: 650;
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition);
+}
+
+.quick-links nav a::after {
+    content: " →";
+
+    margin-left: 5px;
+
+    color: var(--color-cerrado);
+}
+
+.quick-links nav a:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(184, 111, 61, 0.40);
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq {
+    padding: 105px 0;
+
+    background-color: var(--color-white);
+}
+
+.faq .container {
+    max-width: 900px;
+}
+
+.faq-list {
+    border-top: 1px solid var(--color-border);
+}
+
+.faq details {
+    border-bottom: 1px solid var(--color-border);
+}
+
+.faq summary {
+    position: relative;
+
+    padding: 24px 45px 24px 0;
+
+    color: var(--color-text);
+
+    font-size: 1rem;
+    font-weight: 650;
+
+    list-style: none;
+
+    cursor: pointer;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "+";
+
+    position: absolute;
+
+    top: 50%;
+    right: 5px;
+
+    color: var(--color-primary);
+
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    transform: translateY(-50%);
+}
+
+.faq details[open] summary::after {
+    content: "−";
+}
+
+.faq details[open] summary {
+    color: var(--color-primary);
+}
+
+.faq details > p {
+    max-width: 750px;
+
+    margin: -3px 0 18px;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+.faq details > a {
+    display: inline-block;
+
+    margin-bottom: 24px;
+
+    color: var(--color-primary);
+
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.faq details > a::after {
+    content: " →";
+
+    color: var(--color-cerrado);
+}
+
+
+/* =========================================================
+   AVISO INFORMATIVO
+========================================================= */
+
+.information-notice {
+    padding: 50px 0;
+
+    background-color: var(--color-surface);
+
+    border-top: 1px solid var(--color-border);
+}
+
+.information-notice .container {
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 40px;
+
+    max-width: 900px;
+}
+
+.information-notice h2 {
+    margin: 0;
+
+    color: var(--color-primary);
+
+    font-size: 1rem;
+}
+
+.information-notice p {
+    margin: 0;
+
+    color: var(--color-text-muted);
+
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+
+
+/* =========================================================
+   19. RESPONSIVIDADE DAS PÁGINAS INTERNAS
+========================================================= */
+
+
+/* =========================================================
+   TABLETS
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    /* Catálogo */
+
+    .catalog-layout {
+        grid-template-columns: 210px minmax(0, 1fr);
+
+        gap: 30px;
+    }
+
+    .filters {
+        padding-right: 20px;
+    }
+
+    .catalog-results .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-results .project-card:last-child {
+        grid-column: auto;
+    }
+
+
+    /* Projeto */
+
+    .project-layout {
+        grid-template-columns:
+            minmax(0, 1fr)
+            280px;
+
+        gap: 45px;
+    }
+
+
+    /* Requisitos */
+
+    .journey-steps {
+        grid-template-columns: repeat(2, 1fr);
+
+        row-gap: 35px;
+    }
+
+    .quick-links nav ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   TELAS MENORES
+========================================================= */
+
+@media (max-width: 760px) {
+
+    /* Cabeçalho interno */
+
+    .page-header {
+        padding: 50px 0;
+    }
+
+    .page-header h1 {
+        font-size: clamp(2.3rem, 11vw, 3.3rem);
+    }
+
+
+    /* =====================================================
+       PROJETOS
+    ====================================================== */
+
+    .projects-catalog {
+        padding: 50px 0 75px;
+    }
+
+    .search-control {
+        grid-template-columns: 1fr;
+    }
+
+    .search-control input {
+        border-right: 1px solid var(--color-border);
+
+        border-radius:
+            var(--radius-small)
+            var(--radius-small)
+            0
+            0;
+    }
+
+    .search-control button {
+        min-height: 48px;
+
+        border-radius:
+            0
+            0
+            var(--radius-small)
+            var(--radius-small);
+    }
+
+    .catalog-layout {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .filters {
+        position: static;
+
+        padding: 25px;
+
+        background-color: var(--color-white);
+
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-medium);
+    }
+
+    .results-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .results-header label {
+        width: 100%;
+    }
+
+    .results-header select {
+        flex: 1;
+
+        width: 100%;
+    }
+
+
+    /* =====================================================
+       DETALHES DO PROJETO
+    ====================================================== */
+
+    .project-header {
+        padding: 45px 0 55px;
+    }
+
+    .project-header h1 {
+        font-size: clamp(2.3rem, 11vw, 3.4rem);
+    }
+
+    .project-layout {
+        display: flex;
+        flex-direction: column;
+
+        gap: 45px;
+
+        padding-top: 55px;
+        padding-bottom: 70px;
+    }
+
+    .project-content {
+        order: 2;
+    }
+
+    /*
+        No celular as informações essenciais aparecem
+        antes do texto longo do projeto.
+    */
+
+    .project-sidebar {
+        position: static;
+
+        order: 1;
+
+        width: 100%;
+    }
+
+    .project-content > section {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+
+    .related-projects {
+        padding: 70px 0;
+    }
+
+    .related-projects .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .related-projects .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       REQUISITOS
+    ====================================================== */
+
+    .academic-journey,
+    .requirements-section,
+    .faq {
+        padding: 75px 0;
+    }
+
+    .journey-steps {
+        grid-template-columns: 1fr;
+
+        margin-top: 45px;
+    }
+
+    .journey-steps li {
+        padding: 25px 0 25px 25px;
+
+        border-top: 0;
+        border-left: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .journey-steps li::before {
+        top: 30px;
+        left: -5px;
+    }
+
+    .step-number {
+        margin-bottom: 10px;
+    }
+
+    .journey-steps h3,
+    .journey-steps p {
+        max-width: none;
+    }
+
+    .requirement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .requirement-card {
+        min-height: auto;
+    }
+
+    .quick-links {
+        padding: 65px 0;
+    }
+
+    .quick-links nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-links nav a {
+        min-height: 75px;
+    }
+
+    .information-notice .container {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .breadcrumb {
+        margin-bottom: 28px;
+    }
+
+
+    /* Cards */
+
+    .catalog-results .project-card,
+    .requirement-card,
+    .advisor .teacher-card {
+        padding: 24px;
+    }
+
+
+    /* Projeto */
+
+    .project-info > div {
+        grid-template-columns: 1fr;
+
+        gap: 2px;
+    }
+
+    .teacher-card footer {
+        flex-direction: column;
+    }
+
+    .teacher-card footer a {
+        justify-content: center;
+    }
+
+    .project-sidebar > section {
+        padding: 24px;
+    }
+
+
+    /* Requisitos */
+
+    .requirement-card dl > div {
+        grid-template-columns: 1fr;
+
+        gap: 3px;
+    }
+
+    .requirement-card footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+}

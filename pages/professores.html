@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Conheça professores, orientadores, áreas de atuação e projetos acadêmicos."
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Professores e Orientadores | Portal Acadêmico</title>
+</head>
+
+<body>
+
+    <!-- ==================================================
+         CABEÇALHO
+    =================================================== -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                Portal Acadêmico
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="requisitos.html">Requisitos</a></li>
+                    <li><a href="professores.html" aria-current="page">Professores</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==================================================
+             CABEÇALHO DA PÁGINA
+        =================================================== -->
+        <section class="page-header">
+
+            <div class="container">
+
+                <nav aria-label="Caminho de navegação">
+                    <ol class="breadcrumb">
+
+                        <li>
+                            <a href="../index.html">Início</a>
+                        </li>
+
+                        <li aria-current="page">
+                            Professores e orientadores
+                        </li>
+
+                    </ol>
+                </nav>
+
+
+                <p class="eyebrow">
+                    Orientação acadêmica
+                </p>
+
+                <h1>
+                    Professores e orientadores
+                </h1>
+
+                <p>
+                    Conheça os professores, suas áreas de atuação,
+                    interesses acadêmicos e projetos. Encontre orientadores
+                    relacionados aos temas que você deseja desenvolver.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             ÁREAS EM DESTAQUE
+        =================================================== -->
+        <section class="teacher-areas" aria-labelledby="teacher-areas-title">
+
+            <div class="container">
+
+                <header class="section-header">
+
+                    <p class="eyebrow">
+                        Explore por área
+                    </p>
+
+                    <h2 id="teacher-areas-title">
+                        Encontre professores por interesse
+                    </h2>
+
+                </header>
+
+
+                <nav aria-label="Áreas de atuação">
+
+                    <ul class="area-list">
+
+                        <li>
+                            <a href="#professores">
+                                Desenvolvimento Web
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#professores">
+                                Inteligência Artificial
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#professores">
+                                Redes de Computadores
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#professores">
+                                Internet das Coisas
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#professores">
+                                Banco de Dados
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#professores">
+                                Engenharia de Software
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             CATÁLOGO DE PROFESSORES
+        =================================================== -->
+        <section
+            id="professores"
+            class="teachers-catalog"
+            aria-labelledby="teachers-catalog-title"
+        >
+
+            <div class="container">
+
+                <h2 id="teachers-catalog-title" class="visually-hidden">
+                    Catálogo de professores
+                </h2>
+
+
+                <!-- BUSCA -->
+                <form class="search-form" role="search">
+
+                    <label for="teacher-search">
+                        Buscar professor
+                    </label>
+
+                    <div class="search-control">
+
+                        <input
+                            type="search"
+                            id="teacher-search"
+                            name="busca"
+                            placeholder="Digite o nome, área ou interesse..."
+                        >
+
+                        <button type="submit">
+                            Buscar
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <div class="teachers-catalog-layout">
+
+                    <!-- FILTROS -->
+                    <aside class="filters" aria-labelledby="teacher-filters-title">
+
+                        <h2 id="teacher-filters-title">
+                            Filtrar professores
+                        </h2>
+
+
+                        <div class="filter-group">
+
+                            <label for="teacher-area">
+                                Área de atuação
+                            </label>
+
+                            <select id="teacher-area" name="area">
+
+                                <option value="">
+                                    Todas as áreas
+                                </option>
+
+                                <option value="desenvolvimento-web">
+                                    Desenvolvimento Web
+                                </option>
+
+                                <option value="ia">
+                                    Inteligência Artificial
+                                </option>
+
+                                <option value="redes">
+                                    Redes de Computadores
+                                </option>
+
+                                <option value="iot">
+                                    Internet das Coisas
+                                </option>
+
+                                <option value="banco-dados">
+                                    Banco de Dados
+                                </option>
+
+                                <option value="engenharia-software">
+                                    Engenharia de Software
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <fieldset>
+
+                            <legend>Projetos</legend>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="projetos"
+                                    value="ensino"
+                                >
+                                Ensino
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="projetos"
+                                    value="pesquisa"
+                                >
+                                Pesquisa
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="projetos"
+                                    value="extensao"
+                                >
+                                Extensão
+                            </label>
+
+                        </fieldset>
+
+
+                        <fieldset>
+
+                            <legend>Orientação</legend>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="orientacao"
+                                    value="projetos"
+                                >
+                                Projetos
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="orientacao"
+                                    value="tcc"
+                                >
+                                TCC
+                            </label>
+
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    name="orientacao"
+                                    value="estagio"
+                                >
+                                Estágio
+                            </label>
+
+                        </fieldset>
+
+
+                        <button type="button" id="clear-teacher-filters">
+                            Limpar filtros
+                        </button>
+
+                    </aside>
+
+
+                    <!-- RESULTADOS -->
+                    <div class="teacher-results">
+
+                        <header class="results-header">
+
+                            <p>
+                                <strong>6</strong>
+                                professores encontrados
+                            </p>
+
+                            <label for="teacher-order">
+
+                                Ordenar por:
+
+                                <select id="teacher-order" name="ordem">
+
+                                    <option value="nome">
+                                        Nome
+                                    </option>
+
+                                    <option value="projetos">
+                                        Projetos ativos
+                                    </option>
+
+                                </select>
+
+                            </label>
+
+                        </header>
+
+
+                        <div class="teacher-grid">
+
+                            <!-- PROFESSOR 1 -->
+                            <article class="teacher-profile-card">
+
+                                <header class="teacher-card-header">
+
+                                    <div
+                                        class="teacher-avatar"
+                                        aria-hidden="true"
+                                    >
+                                        JS
+                                    </div>
+
+                                    <div>
+
+                                        <h2>
+                                            Prof. João Silva
+                                        </h2>
+
+                                        <p>
+                                            Sistemas de Informação
+                                        </p>
+
+                                    </div>
+
+                                </header>
+
+
+                                <p>
+                                    Atua no desenvolvimento de soluções
+                                    envolvendo Internet das Coisas, sistemas
+                                    embarcados, redes e aplicações tecnológicas.
+                                </p>
+
+
+                                <section aria-label="Áreas de atuação">
+
+                                    <ul class="tag-list">
+                                        <li>IoT</li>
+                                        <li>Redes</li>
+                                        <li>Sistemas Embarcados</li>
+                                    </ul>
+
+                                </section>
+
+
+                                <dl class="teacher-info">
+
+                                    <div>
+                                        <dt>Projetos ativos</dt>
+                                        <dd>3</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Orientação</dt>
+                                        <dd>Projetos, TCC e estágio</dd>
+                                    </div>
+
+                                </dl>
+
+
+                                <footer>
+                                    <a href="professor.html">
+                                        Ver perfil
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROFESSOR 2 -->
+                            <article class="teacher-profile-card">
+
+                                <header class="teacher-card-header">
+
+                                    <div
+                                        class="teacher-avatar"
+                                        aria-hidden="true"
+                                    >
+                                        MS
+                                    </div>
+
+                                    <div>
+
+                                        <h2>
+                                            Profª. Maria Souza
+                                        </h2>
+
+                                        <p>
+                                            Sistemas de Informação
+                                        </p>
+
+                                    </div>
+
+                                </header>
+
+
+                                <p>
+                                    Desenvolve atividades relacionadas à
+                                    inteligência artificial, aprendizado
+                                    de máquina e análise de dados.
+                                </p>
+
+
+                                <section aria-label="Áreas de atuação">
+
+                                    <ul class="tag-list">
+                                        <li>Inteligência Artificial</li>
+                                        <li>Machine Learning</li>
+                                        <li>Dados</li>
+                                    </ul>
+
+                                </section>
+
+
+                                <dl class="teacher-info">
+
+                                    <div>
+                                        <dt>Projetos ativos</dt>
+                                        <dd>2</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Orientação</dt>
+                                        <dd>Pesquisa e TCC</dd>
+                                    </div>
+
+                                </dl>
+
+
+                                <footer>
+                                    <a href="professor.html">
+                                        Ver perfil
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROFESSOR 3 -->
+                            <article class="teacher-profile-card">
+
+                                <header class="teacher-card-header">
+
+                                    <div
+                                        class="teacher-avatar"
+                                        aria-hidden="true"
+                                    >
+                                        CO
+                                    </div>
+
+                                    <div>
+
+                                        <h2>
+                                            Prof. Carlos Oliveira
+                                        </h2>
+
+                                        <p>
+                                            Sistemas de Informação
+                                        </p>
+
+                                    </div>
+
+                                </header>
+
+
+                                <p>
+                                    Atua no desenvolvimento de aplicações
+                                    web, interfaces digitais e engenharia
+                                    de software.
+                                </p>
+
+
+                                <section aria-label="Áreas de atuação">
+
+                                    <ul class="tag-list">
+                                        <li>Desenvolvimento Web</li>
+                                        <li>IHM</li>
+                                        <li>Engenharia de Software</li>
+                                    </ul>
+
+                                </section>
+
+
+                                <dl class="teacher-info">
+
+                                    <div>
+                                        <dt>Projetos ativos</dt>
+                                        <dd>2</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Orientação</dt>
+                                        <dd>Projetos e TCC</dd>
+                                    </div>
+
+                                </dl>
+
+
+                                <footer>
+                                    <a href="professor.html">
+                                        Ver perfil
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROFESSOR 4 -->
+                            <article class="teacher-profile-card">
+
+                                <header class="teacher-card-header">
+
+                                    <div
+                                        class="teacher-avatar"
+                                        aria-hidden="true"
+                                    >
+                                        RS
+                                    </div>
+
+                                    <div>
+
+                                        <h2>
+                                            Prof. Rafael Santos
+                                        </h2>
+
+                                        <p>
+                                            Sistemas de Informação
+                                        </p>
+
+                                    </div>
+
+                                </header>
+
+
+                                <p>
+                                    Pesquisa redes de computadores,
+                                    infraestrutura, segurança e técnicas
+                                    de monitoramento de ambientes computacionais.
+                                </p>
+
+
+                                <section aria-label="Áreas de atuação">
+
+                                    <ul class="tag-list">
+                                        <li>Redes</li>
+                                        <li>Infraestrutura</li>
+                                        <li>Segurança</li>
+                                    </ul>
+
+                                </section>
+
+
+                                <dl class="teacher-info">
+
+                                    <div>
+                                        <dt>Projetos ativos</dt>
+                                        <dd>2</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Orientação</dt>
+                                        <dd>Pesquisa, TCC e estágio</dd>
+                                    </div>
+
+                                </dl>
+
+
+                                <footer>
+                                    <a href="professor.html">
+                                        Ver perfil
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROFESSOR 5 -->
+                            <article class="teacher-profile-card">
+
+                                <header class="teacher-card-header">
+
+                                    <div
+                                        class="teacher-avatar"
+                                        aria-hidden="true"
+                                    >
+                                        AM
+                                    </div>
+
+                                    <div>
+
+                                        <h2>
+                                            Profª. Ana Martins
+                                        </h2>
+
+                                        <p>
+                                            Sistemas de Informação
+                                        </p>
+
+                                    </div>
+
+                                </header>
+
+
+                                <p>
+                                    Atua em projetos interdisciplinares
+                                    relacionados à tecnologia, sustentabilidade
+                                    e transformação digital.
+                                </p>
+
+
+                                <section aria-label="Áreas de atuação">
+
+                                    <ul class="tag-list">
+                                        <li>Sustentabilidade</li>
+                                        <li>Tecnologia</li>
+                                        <li>Extensão</li>
+                                    </ul>
+
+                                </section>
+
+
+                                <dl class="teacher-info">
+
+                                    <div>
+                                        <dt>Projetos ativos</dt>
+                                        <dd>1</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Orientação</dt>
+                                        <dd>Extensão e projetos</dd>
+                                    </div>
+
+                                </dl>
+
+
+                                <footer>
+                                    <a href="professor.html">
+                                        Ver perfil
+                                    </a>
+                                </footer>
+
+                            </article>
+
+
+                            <!-- PROFESSOR 6 -->
+                            <article class="teacher-profile-card">
+
+                                <header class="teacher-card-header">
+
+                                    <div
+                                        class="teacher-avatar"
+                                        aria-hidden="true"
+                                    >
+                                        LP
+                                    </div>
+
+                                    <div>
+
+                                        <h2>
+                                            Prof. Lucas Pereira
+                                        </h2>
+
+                                        <p>
+                                            Sistemas de Informação
+                                        </p>
+
+                                    </div>
+
+                                </header>
+
+
+                                <p>
+                                    Atua nas áreas de banco de dados,
+                                    sistemas de informação e desenvolvimento
+                                    de soluções empresariais.
+                                </p>
+
+
+                                <section aria-label="Áreas de atuação">
+
+                                    <ul class="tag-list">
+                                        <li>Banco de Dados</li>
+                                        <li>Sistemas</li>
+                                        <li>ERP</li>
+                                    </ul>
+
+                                </section>
+
+
+                                <dl class="teacher-info">
+
+                                    <div>
+                                        <dt>Projetos ativos</dt>
+                                        <dd>1</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt>Orientação</dt>
+                                        <dd>Projetos e TCC</dd>
+                                    </div>
+
+                                </dl>
+
+
+                                <footer>
+                                    <a href="professor.html">
+                                        Ver perfil
+                                    </a>
+                                </footer>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             ORIENTAÇÃO
+        =================================================== -->
+        <section class="guidance-section" aria-labelledby="guidance-section-title">
+
+            <div class="container">
+
+                <div>
+
+                    <p class="eyebrow">
+                        Precisa de orientação?
+                    </p>
+
+                    <h2 id="guidance-section-title">
+                        Encontre o professor adequado ao seu objetivo
+                    </h2>
+
+                    <p>
+                        Considere a área de atuação do professor, os projetos
+                        que ele desenvolve e a relação desses temas com seus
+                        interesses acadêmicos.
+                    </p>
+
+                </div>
+
+
+                <ul class="guidance-list">
+
+                    <li>
+                        <span>01</span>
+                        Identifique sua área de interesse
+                    </li>
+
+                    <li>
+                        <span>02</span>
+                        Consulte os professores relacionados
+                    </li>
+
+                    <li>
+                        <span>03</span>
+                        Conheça seus projetos
+                    </li>
+
+                    <li>
+                        <span>04</span>
+                        Entre em contato
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================================
+         RODAPÉ
+    =================================================== -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                <strong>Portal Acadêmico</strong>
+            </p>
+
+            <nav aria-label="Navegação do rodapé">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="requisitos.html">Requisitos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                </ul>
+            </nav>
+
+            <p>
+                Projeto desenvolvido para a disciplina de Programação Web I.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="../js/professores.js"></script>
+
+</body>
+
+</html>
