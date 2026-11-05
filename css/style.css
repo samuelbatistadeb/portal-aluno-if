@@ -2613,7 +2613,472 @@ button:focus-visible {
     line-height: 1.7;
 }
 
+/* =========================================================
+   PÁGINA 5 — DETALHES DO REQUISITO
+========================================================= */
 
+/* Cabeçalho do requisito */
+
+.requirement-header {
+    background-color: #f7f8f5;
+    padding: 55px 0 65px;
+    border-bottom: 1px solid #e5e9e3;
+}
+
+.requirement-header h1 {
+    max-width: 800px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    color: #173f35;
+    margin: 18px 0;
+}
+
+.requirement-summary {
+    max-width: 720px;
+    color: #647067;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+
+/* Navegação interna */
+
+.requirement-navigation {
+    position: sticky;
+    top: 70px;
+    z-index: 10;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e9e3;
+}
+
+.requirement-navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-x: auto;
+}
+
+.requirement-navigation a {
+    display: block;
+    padding: 18px 0;
+    color: #647067;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.requirement-navigation a:hover {
+    color: #4f7c57;
+}
+
+
+/* Layout principal */
+
+.requirement-detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 65px;
+    align-items: start;
+    padding-top: 65px;
+    padding-bottom: 80px;
+}
+
+.requirement-detail-content {
+    min-width: 0;
+}
+
+.requirement-detail-content section {
+    margin-bottom: 65px;
+    scroll-margin-top: 130px;
+}
+
+.requirement-detail-content h2 {
+    color: #173f35;
+    font-size: 1.8rem;
+    margin: 12px 0 20px;
+    line-height: 1.3;
+}
+
+.requirement-detail-content p {
+    color: #626d65;
+    line-height: 1.85;
+    margin-bottom: 16px;
+}
+
+.requirement-detail-content h3 {
+    color: #173f35;
+    font-size: 1.08rem;
+    margin-bottom: 10px;
+}
+
+
+/* Avisos e informações */
+
+.requirement-note,
+.information-box {
+    background-color: #f3f6f1;
+    border-left: 4px solid #4f7c57;
+    border-radius: 0 8px 8px 0;
+    padding: 22px 25px;
+    margin-top: 30px;
+}
+
+.requirement-note h3,
+.information-box h3 {
+    margin-top: 0;
+}
+
+.requirement-note p,
+.information-box p {
+    margin-bottom: 0;
+}
+
+
+/* Etapas do processo */
+
+.process-steps {
+    list-style: none;
+    padding: 0;
+    margin: 35px 0 0;
+    counter-reset: steps;
+}
+
+.process-steps li {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 22px;
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.process-steps li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 23px;
+    top: 48px;
+    bottom: 0;
+    width: 1px;
+    background-color: #dce5da;
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf3eb;
+    color: #4f7c57;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.process-steps h3 {
+    margin: 3px 0 8px;
+}
+
+.process-steps p {
+    margin-bottom: 10px;
+}
+
+.process-steps a {
+    color: #4f7c57;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.process-steps a:hover {
+    color: #173f35;
+    text-decoration: underline;
+}
+
+
+/* Lista de documentos */
+
+.document-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    border-top: 1px solid #e5e9e3;
+}
+
+.document-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 23px 0;
+    border-bottom: 1px solid #e5e9e3;
+}
+
+.document-list h3 {
+    margin-bottom: 6px;
+}
+
+.document-list p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.document-list span {
+    flex-shrink: 0;
+    background-color: #f3f6f1;
+    color: #4f7c57;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+
+/* Responsáveis pelo estágio */
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.role-grid article {
+    padding: 25px;
+    border: 1px solid #e5e9e3;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.role-grid h3 {
+    margin-top: 0;
+}
+
+.role-grid p {
+    font-size: 0.94rem;
+}
+
+.role-grid a {
+    color: #4f7c57;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+
+/* Chamada para ação */
+
+.requirement-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 30px;
+    margin-top: 25px;
+    background-color: #f3f6f1;
+    border-radius: 12px;
+}
+
+.requirement-action h3 {
+    margin-top: 0;
+}
+
+.requirement-action p {
+    margin-bottom: 0;
+    font-size: 0.94rem;
+}
+
+.requirement-action .button {
+    flex-shrink: 0;
+}
+
+
+/* FAQ */
+
+.faq-list {
+    margin-top: 25px;
+    border-top: 1px solid #e5e9e3;
+}
+
+.faq-list details {
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e9e3;
+}
+
+.faq-list summary {
+    position: relative;
+    padding-right: 30px;
+    color: #173f35;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-list summary::after {
+    content: "+";
+    position: absolute;
+    right: 5px;
+    top: -4px;
+    color: #4f7c57;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.faq-list details[open] summary::after {
+    content: "−";
+}
+
+.faq-list details p {
+    margin: 18px 0 5px;
+    font-size: 0.95rem;
+}
+
+.faq-list details a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4f7c57;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* Sidebar */
+
+.requirement-sidebar {
+    position: sticky;
+    top: 145px;
+}
+
+.requirement-sidebar section {
+    padding: 25px;
+    margin-bottom: 22px;
+    border: 1px solid #e5e9e3;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.requirement-sidebar h2 {
+    color: #173f35;
+    font-size: 1.1rem;
+    margin: 0 0 20px;
+}
+
+.requirement-sidebar dl {
+    margin: 0;
+}
+
+.requirement-sidebar dl div {
+    padding: 13px 0;
+    border-bottom: 1px solid #edf0eb;
+}
+
+.requirement-sidebar dl div:last-child {
+    border-bottom: none;
+}
+
+.requirement-sidebar dt {
+    color: #879087;
+    font-size: 0.78rem;
+    margin-bottom: 5px;
+}
+
+.requirement-sidebar dd {
+    color: #35443a;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.requirement-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.requirement-sidebar li {
+    margin-bottom: 12px;
+}
+
+.requirement-sidebar li:last-child {
+    margin-bottom: 0;
+}
+
+.requirement-sidebar a {
+    color: #4f7c57;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.requirement-sidebar a:hover {
+    text-decoration: underline;
+}
+
+
+/* Outros requisitos */
+
+.related-requirements {
+    background-color: #f7f8f5;
+    padding: 75px 0;
+    border-top: 1px solid #e5e9e3;
+}
+
+.related-requirement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.related-requirement-grid article {
+    padding: 28px;
+    background-color: #ffffff;
+    border: 1px solid #e5e9e3;
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.related-requirement-grid article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(23, 63, 53, 0.07);
+}
+
+.related-requirement-grid article > span {
+    display: inline-block;
+    color: #b86f3d;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.related-requirement-grid h3 {
+    color: #173f35;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.related-requirement-grid p {
+    color: #68736a;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.related-requirement-grid a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4f7c57;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
 
 /* =========================================================
    19. RESPONSIVIDADE DAS PÁGINAS INTERNAS
