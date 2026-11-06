@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Informações sobre o projeto Sistema de Irrigação Inteligente."
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Calendário | Portal Acadêmico</title>
+</head>
+<body>
+        <!-- CABEÇALHO -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                Portal Acadêmico
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                    <li><a href="requisitos.html">Requisitos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Navegação estrutural">
+                    <a href="index.html">Início</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Calendário e Prazos</span>
+                </nav>
+
+                <h1>Calendário e Prazos</h1>
+                <p>
+                    Acompanhe os principais prazos, eventos e atividades
+                    acadêmicas do IF Goiano – Campus Ceres.
+                </p>
+            </div>
+        </section>
+
+        <section class="calendar-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Próximas atividades</h2>
+                    <p>Confira as datas importantes da comunidade acadêmica.</p>
+                </header>
+
+                <form class="calendar-filters">
+                    <label for="category">Categoria</label>
+                    <select id="category" name="category">
+                        <option value="">Todas as categorias</option>
+                        <option value="projetos">Projetos</option>
+                        <option value="eventos">Eventos</option>
+                        <option value="inscricoes">Inscrições</option>
+                        <option value="academico">Acadêmico</option>
+                    </select>
+
+                    <label for="period">Período</label>
+                    <select id="period" name="period">
+                        <option value="">Todos os períodos</option>
+                        <option value="month">Este mês</option>
+                        <option value="next-month">Próximo mês</option>
+                    </select>
+                </form>
+
+                <div class="calendar-content">
+                    <section class="calendar-featured">
+                        <h2>Em destaque</h2>
+
+                        <article class="calendar-event">
+                            <time datetime="2026-11-20">
+                                20 nov. 2026
+                            </time>
+                            <h3>Inscrições para projetos de pesquisa</h3>
+                            <p>
+                                Período de inscrição para participação
+                                em projetos de iniciação científica.
+                            </p>
+                            <a href="projetos.html">
+                                Consultar oportunidades
+                            </a>
+                        </article>
+                    </section>
+
+                    <section class="calendar-list">
+                        <h2>Outras datas importantes</h2>
+
+                        <article class="calendar-event">
+                            <time datetime="2026-11-25">
+                                25 nov. 2026
+                            </time>
+                            <h3>Evento acadêmico</h3>
+                            <p>Descrição da atividade acadêmica.</p>
+                        </article>
+
+                        <article class="calendar-event">
+                            <time datetime="2026-12-05">
+                                05 dez. 2026
+                            </time>
+                            <h3>Prazo para entrega</h3>
+                            <p>Descrição do prazo ou atividade.</p>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <!-- RODAPÉ -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p><strong>Portal Acadêmico</strong></p>
+
+            <nav aria-label="Navegação do rodapé">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="requisitos.html">Requisitos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                </ul>
+            </nav>
+
+            <p>
+                Projeto desenvolvido para a disciplina de Programação Web I.
+            </p>
+
+        </div>
+
+    </footer>
+    
+</body>
+</html>

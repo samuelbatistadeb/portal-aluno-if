@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Informações sobre o projeto Sistema de Irrigação Inteligente."
+    >
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Publicar Oportunidade | Portal Acadêmico</title>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="site-header">
+
+        <div class="container header-container">
+
+            <a href="../index.html" class="logo">
+                Portal Acadêmico
+            </a>
+
+            <nav class="main-nav" aria-label="Navegação principal">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                    <li><a href="requisitos.html">Requisitos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                    <li><a href="../index.html#sobre">Sobre</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Navegação estrutural">
+                    <a href="index.html">Início</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Publicar Oportunidade</span>
+                </nav>
+
+                <h1>Divulgue uma oportunidade</h1>
+                <p>
+                    Compartilhe projetos e atividades acadêmicas
+                    com os estudantes do IF Goiano – Campus Ceres.
+                </p>
+            </div>
+        </section>
+
+        <section class="publication-intro">
+            <div class="container">
+                <h2>Como funciona?</h2>
+
+                <div class="publication-steps">
+                    <article>
+                        <span>01</span>
+                        <h3>Prepare as informações</h3>
+                        <p>
+                            Organize a descrição, os objetivos,
+                            os requisitos e o período de participação.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span>02</span>
+                        <h3>Envie a oportunidade</h3>
+                        <p>
+                            Preencha as informações necessárias
+                            para apresentar a atividade aos estudantes.
+                        </p>
+                    </article>
+
+                    <article>
+                        <span>03</span>
+                        <h3>Divulgação</h3>
+                        <p>
+                            Após a análise e aprovação, a oportunidade
+                            poderá ser disponibilizada no portal.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="publication-form-section">
+            <div class="container">
+                <header class="section-header">
+                    <h2>Informações da oportunidade</h2>
+                    <p>
+                        Preencha os campos para simular o envio
+                        de uma nova oportunidade.
+                    </p>
+                </header>
+
+                <form class="publication-form" action="#" method="post">
+                    <fieldset>
+                        <legend>Identificação</legend>
+
+                        <div class="form-group">
+                            <label for="title">Título da oportunidade</label>
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                placeholder="Ex.: Projeto de iniciação científica"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Categoria</label>
+                            <select id="category" name="category" required>
+                                <option value="">Selecione uma categoria</option>
+                                <option value="ensino">Ensino</option>
+                                <option value="pesquisa">Pesquisa</option>
+                                <option value="extensao">Extensão</option>
+                                <option value="estagio">Estágio</option>
+                                <option value="monitoria">Monitoria</option>
+                                <option value="evento">Evento</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Descrição</label>
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="5"
+                                placeholder="Apresente os objetivos e as atividades..."
+                                required
+                            ></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Participação</legend>
+
+                        <div class="form-group">
+                            <label for="requirements">
+                                Requisitos para participação
+                            </label>
+                            <textarea
+                                id="requirements"
+                                name="requirements"
+                                rows="3"
+                                placeholder="Informe os conhecimentos e critérios necessários."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vacancies">Quantidade de vagas</label>
+                            <input
+                                type="number"
+                                id="vacancies"
+                                name="vacancies"
+                                min="1"
+                                placeholder="Ex.: 5"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="deadline">Prazo para inscrição</label>
+                            <input
+                                type="date"
+                                id="deadline"
+                                name="deadline"
+                            >
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Responsável</legend>
+
+                        <div class="form-group">
+                            <label for="professor">Professor responsável</label>
+                            <input
+                                type="text"
+                                id="professor"
+                                name="professor"
+                                placeholder="Nome do professor"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail institucional</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="professor@ifgoiano.edu.br"
+                                required
+                            >
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <button type="reset">Limpar formulário</button>
+                        <button type="submit">Enviar oportunidade</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p><strong>Portal Acadêmico</strong></p>
+
+            <nav aria-label="Navegação do rodapé">
+                <ul>
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="projetos.html">Projetos</a></li>
+                    <li><a href="requisitos.html">Requisitos</a></li>
+                    <li><a href="professores.html">Professores</a></li>
+                </ul>
+            </nav>
+
+            <p>
+                Projeto desenvolvido para a disciplina de Programação Web I.
+            </p>
+
+        </div>
+
+    </footer>
+    
+</body>
+</html>
